@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Instagram, Twitter, YouTube, Send } from "@mui/icons-material";
 import { TextField, IconButton } from "@mui/material";
-import Logonexw from "../Activity/Images/Logonexw.png";
+import Logofooter from "../assets/Logofooter.png";
 
 const FooterContainer = styled.footer`
   background-color: #2d3a45;
@@ -132,7 +132,7 @@ const Footer = () => {
       <FooterContent>
         <LogoSection>
           <FooterTitle>
-            <img src={Logonexw} alt="Logo" style={{ marginRight: "10px" }} />
+            <img src={Logofooter} alt="Logo" style={{ marginRight: "10px" }} />
           </FooterTitle>
           <FooterText>
             Copyright © 2020 Nexcent ltd.

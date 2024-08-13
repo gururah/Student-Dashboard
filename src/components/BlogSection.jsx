@@ -1,142 +1,119 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import {styled} from 'styled-components';
-import Box from '@mui/material/Box';
-
+import React from 'react';
+import { Container, Grid, Typography, Box, Button } from '@mui/material';
+import styled from 'styled-components';
 import Card1 from '../assets/card1.png';
 import Card2 from '../assets/card2.png';
 import Card3 from '../assets/card3.png';
-import Button from '../assets/Button.png';
 
-const NewCardContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 366px;
-  width: 368px;
 
-  @media (max-width: 768px) {
-    height: 300px;
-    width: 300px;
-  }
-
-  @media (max-width: 480px) {
-    height: 250px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+// Styled Components
+const StyledContainer = styled(Container)`
+  margin-top: 10px;
 `;
 
-const NewCard = styled.div`
+const StyledTypography = styled(Typography)`
+  font-family: 'Inter';
+  color: ${({ color }) => color || '#4D4D4D'};
+  font-weight: ${({ fontWeight }) => fontWeight || '400'};
+  margin-bottom: ${({ mb }) => mb || '0'}px;
+`;
+
+const StyledBox = styled(Box)`
+  text-align: center;
+  position: relative;
+`;
+
+const Overlay = styled(Box)`
+  position: absolute;
+  bottom: -32px; /* Push the box below the image */
+  left: 48px; /* 48px gap on the left */
+  right: 48px; /* 48px gap on the right */
+  background-color: white;
+  color: black;
+  padding: 16px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  height: 306px !important;
-  width: 350px !important;
-
-  @media (max-width: 768px) {
-    height: 250px !important;
-    width: 300px !important;
-  }
-
-  @media (max-width: 480px) {
-    height: auto !important;
-    width: 100% !important;
-    padding: 0;
-  }
+  justify-content: space-between;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 `;
 
-const NewCardContent = styled.div`
-  text-align: center;
-  background-color: #F5F7FA;
-  border-radius: 8px;
-  padding: 16px;
-  height: 176px;
-  width: 300px;
-  margin-top: -50px;
-  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.1); /* Added shadow */
-
-  @media (max-width: 768px) {
-    height: 150px;
-    width: 250px;
-    padding: 12px;
-  }
-
-  @media (max-width: 480px) {
-    height: auto;
-    width: 90%;
-    margin-top: -30px;
-    padding: 10px;
-  }
+const OverlayTitle = styled(Typography)`
+  font-weight: bold;
+  font-size: 1rem;
 `;
 
-const ResponsiveBox = styled(Box)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 100px;
-
-  @media (max-width: 768px) {
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  @media (max-width: 480px) {
-    gap: 10px;
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
+const OverlayButton = styled(Button)`
+  align-self: flex-start;
+  font-weight: bold;
+  text-transform: none;
+  padding: 0;
+  margin-top: 8px;
 `;
 
-function BlogSection() {
+const CommunityUpdates = () => {
   return (
-    <ResponsiveBox>
-       
+    <StyledContainer>
+      <Grid container spacing={2} alignItems="center" justifyContent="center">
+        <Grid item xs={12}>
+          <StyledTypography variant="h5" align="center" fontWeight="bold" mb={4}>
+            Caring is the new marketing
+          </StyledTypography>
+          <StyledTypography variant="subtitle1" align="center" color="#717171" mb={4}>
+            The Nexcent blog is the best place to read about the latest membership insights,<br /> 
+            trends, and more. See who's joining the community, read about how our community <br />
+            are increasing their membership income and lot's more.
+          </StyledTypography>
+        </Grid>
 
-      <NewCardContainer>
-        
-        <NewCard>
-          <img src={Card1} style={{ width: '100%', height: 'auto' }} alt="Safeguarding Processes" />
-          <NewCardContent>
-            <Typography variant='h4' fontSize={'20px'} marginBottom={'20px'} color={'gray'}>
-              Creating Streamlined Safeguarding Processes with OneRen
-            </Typography>
-            <img src={Button} alt="OneRen Logo" />
-          </NewCardContent>
-        </NewCard>
-      </NewCardContainer>
-      <br/>
-      <br/>
+        <Grid item xs={12} container spacing={4}>
+          <Grid item xs={12} md={4}>
+            <StyledBox>
+              <img src={Card1} alt="Safeguarding Processes" style={{ width: '100%', height: 'auto' }} />
+              <Overlay>
+                <OverlayTitle>Creating Streamlined Safeguarding Processes with OneRen</OverlayTitle>
+                <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
+              </Overlay>
+            </StyledBox>
+          </Grid>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
 
-      <NewCardContainer>
-        <NewCard>
-          <img src={Card2} style={{ width: '100%', height: 'auto' }} alt="Safeguarding Processes" />
-          <NewCardContent>
-            <Typography variant='h4' fontSize={'20px'} marginBottom={'20px'} color={'gray'}>
-            What are your safeguarding responsibilities and how can you manage them?
-            </Typography>
-            <img src={Button} alt="OneRen Logo" />
-          </NewCardContent>
-        </NewCard>
-      </NewCardContainer>
+          
+          <Grid item xs={12} md={4}>
+            <StyledBox>
+              <img src={Card2} alt="Safeguarding Processes" style={{ width: '100%', height: 'auto' }} />
+              <Overlay>
+                <OverlayTitle>What are your safeguarding responsibilities and how can you manage them?</OverlayTitle>
+                <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
+              </Overlay>
+            </StyledBox>
+          </Grid>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <Grid item xs={12} md={4}>
+            <StyledBox>
+              <img src={Card3} alt="Membership Model" style={{ width: '100%', height: 'auto' }} />
+              <Overlay>
+                <OverlayTitle>Revamping the Membership Model with Triathlon <br/>Australia</OverlayTitle>
+                <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
+              </Overlay>
+            </StyledBox>
+          </Grid>
+        </Grid>
+      </Grid>
       <br/>
       <br/>
-
-      <NewCardContainer>
-        <NewCard>
-          <img src={Card3} style={{ width: '100%', height: 'auto' }} alt="Safeguarding Processes" />
-          <NewCardContent>
-            <Typography variant='h4' fontSize={'20px'} marginBottom={'20px'} color={'gray'}>
-            Revamping the Membership Model with Triathlon<br/> Australia
-            </Typography>
-            <img src={Button} alt="OneRen Logo" />
-          </NewCardContent>
-        </NewCard>
-      </NewCardContainer>
-    </ResponsiveBox>
+      <br/>
+      <br/>
+      <br/>
+    </StyledContainer>
   );
-}
+};
 
-export default BlogSection;
+export default CommunityUpdates;
