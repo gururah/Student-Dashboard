@@ -16,31 +16,36 @@ const TestimonalsSection2 = () => {
     <Box 
             sx={{ 
                 flexGrow: 1, 
-                height: 'auto', // Set to auto for responsive height
-                marginTop: { xs: '20px', sm: '30px' },
+                // width:'1440px',
+                // height: '390px', 
+                // marginTop: { xs: '20px', sm: '30px' },
                 padding: { xs: '0 16px', sm: '0 32px' },
-                fontFamily: 'Inter, sans-serif'
-                 // Add padding for mobile screens
+                fontFamily: 'Inter, sans-serif',
+                backgroundColor:'#F5F7FA'
+                
+                
             }}
         >
-            <Grid container spacing={2} columns={16} alignItems="center">
+            <Grid container spacing={2} columns={12} alignItems="center" paddingLeft={6} paddingRight={4}>
                 {/* Image Section */}
                 <Grid 
                     item 
                     xs={12} 
-                    sm={6} 
+                    sm={5} 
+                    md={4}
                     sx={{
                         display: 'flex',
                         justifyContent: { xs: 'center', sm: 'flex-start' }, // Center image on mobile
                         marginTop: { xs: '10px', sm: '0' }, // Adjust margin for mobile
+                        marginLeft:'14px'
                     }}
                 >
                     <img 
                         src={testimonialImage}
                         alt="" 
                         style={{
-                            maxWidth: '100%', // Make the image responsive
-                            height: 'auto'
+                            maxWidth: '326px', // Make the image responsive
+                            height: '326px'
                         }} />
                 </Grid>
 
@@ -48,13 +53,18 @@ const TestimonalsSection2 = () => {
                 <Grid 
                     item 
                     xs={12} 
-                    sm={10} 
+                    sm={5} 
+                    md={6}
                     sx={{
-                        marginTop: { xs: '20px', sm: '0' }, // Adjust margin for mobile
+                        // marginTop: { xs: '20px', sm: '0' }, // Adjust margin for mobile
                         paddingLeft: { sm: '150px' }, // Add padding on larger screens
                     }}
-                >
-                    <Box>
+                    // xs={{alignItems:"center"}}
+                ><Box  
+                xs={{alignItems:"center"}}
+                sx={{width:'100%',height:'auto'}}>
+                    <Box sx={{width:'100%',height:'auto'}}
+                     xs={4} sm={2} md={1} textAlign="center">
                         <div style={{
                             textAlign: 'left', 
                             fontSize: '1rem', // Adjust font size for responsiveness
@@ -62,19 +72,21 @@ const TestimonalsSection2 = () => {
                         }}>
                             
                             <p style={{ 
-                                color: 'gray', 
-                                textAlign: 'left', 
-                                fontSize: '1rem', // Adjust font size for responsiveness
-                                margin: '10px 0' 
-                            }}>
-                                Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
-                                massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis.
-                                In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus.
-                                In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
-                                commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis 
-                                libero. Donec consectetur faucibus ipsum id gravida.
-                            </p>
-                            <h1 style={{ margin: '10px 0' ,color:"#4CAF4F"}}>
+    color: 'gray', 
+    textAlign: 'left', 
+    fontSize: '1rem', // Adjust font size for responsiveness
+    margin: '10px 0',
+    lineHeight: '1.6' // Adjust this value for line spacing
+}}>
+    Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
+    massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis.
+    In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus.
+    In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+    commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis 
+    libero. Donec consectetur faucibus ipsum id gravida.
+</p>
+
+                            <h1 xs={4} textAlign="center" style={{ margin: '10px 0' ,color:"#4CAF4F"}}>
                                 Tim Smith 
                             </h1>
                             < p style={{ margin: '10px 0',color:"gray" }}>
@@ -84,39 +96,41 @@ const TestimonalsSection2 = () => {
                         </div>
                     </Box>
                     <Box 
-                                display='flex' 
+                    xs={4} sm={2} md={1} alignItems="center"
+                                display='flex'                               
                                 sx={{ 
-                                    flexDirection: { xs: 'column', sm: 'row' }, // Stack items on mobile
+                                    // flexDirection: { xs: 'column', sm: 'row' }, // Stack items on mobile
                                     alignItems: { xs: 'center', sm: 'flex-start' },
-                                    marginTop: '30px' 
                                 }}
                             >
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1} sx={{alignContent:'center',marginTop:'30px',width:'100%' }}> 
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon1 } alt=""/>
-                </Box>
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon2 } alt=""/>
-                </Box>
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon3} alt=""/>
-                </Box>
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon4} alt=""/>
-                </Box>
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon5} alt=""/>
-                </Box>
-                <Box gridColumn="span 2">
-                    <img src={Sampleicon6} alt=""/>
-                </Box>
-                
-            </Box>
                                 <Box 
+                                 
+                                 display="grid" gridTemplateColumns="repeat(12, 1fr)" 
+                                gap={2} sx={{ alignContent: 'center', width: '100%' }}> 
+                            <Box gridColumn="span 2">
+                                <img src={Sampleicon1} alt="" style={{ maxWidth: '100%' }} />
+                            </Box> 
+                            <Box gridColumn="span 2">
+                                <img src={Sampleicon2} alt="" style={{ maxWidth: '100%' }} />
+                            </Box>
+                            <Box gridColumn="span 2">
+                                <img src={Sampleicon3} alt="" style={{ maxWidth: '100%' }} />
+                            </Box>
+                            <Box gridColumn="span 2">
+                                <img src={Sampleicon4} alt="" style={{ maxWidth: '100%' }} />
+                            </Box>
+                            <Box gridColumn="span 2">
+                                <img src={Sampleicon5} alt="" style={{ maxWidth: '100%' }} />
+                            </Box>
+                            <Box gridColumn="span 2">
+                                <img src={ Sampleicon6} alt="" style={{ maxWidth: '100%' }} />
+                            </Box>
+                        </Box>
+                                <Box 
+                                xs={12}
                                     sx={{ 
                                         display: 'flex', 
-                                        alignItems: 'center', 
-                                        marginTop: '34px',
+                                        alignItems: 'center',
                                         marginLeft: { sm: '2px' }
                                     }}
                                 >
@@ -124,6 +138,7 @@ const TestimonalsSection2 = () => {
                                     <East fontSize="large" sx={{ color: 'green', marginLeft: '5px' }} />
                                 </Box>
                             </Box>
+                        </Box>
                 </Grid>
             </Grid>
         </Box>

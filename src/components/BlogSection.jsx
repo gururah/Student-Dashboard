@@ -8,11 +8,12 @@ import Card3 from '../assets/card3.png';
 
 // Styled Components
 const StyledContainer = styled(Container)`
-  margin-top: 10px;
+  margin-top: 0px;
 `;
 
 const StyledTypography = styled(Typography)`
   font-family: 'Inter';
+  bottom: -2px; 
   color: ${({ color }) => color || '#4D4D4D'};
   font-weight: ${({ fontWeight }) => fontWeight || '400'};
   margin-bottom: ${({ mb }) => mb || '0'}px;
@@ -25,7 +26,7 @@ const StyledBox = styled(Box)`
 
 const Overlay = styled(Box)`
   position: absolute;
-  bottom: -32px; /* Push the box below the image */
+  bottom: -2px; /* Push the box below the image */
   left: 48px; /* 48px gap on the left */
   right: 48px; /* 48px gap on the right */
   background-color: white;
@@ -44,7 +45,7 @@ const OverlayTitle = styled(Typography)`
 `;
 
 const OverlayButton = styled(Button)`
-  align-self: flex-start;
+  align-self: flex-center;
   font-weight: bold;
   text-transform: none;
   padding: 0;
@@ -53,10 +54,11 @@ const OverlayButton = styled(Button)`
 
 const CommunityUpdates = () => {
   return (
-    <StyledContainer>
-      <Grid container spacing={2} alignItems="center" justifyContent="center">
+    
+    <StyledContainer> 
+      <Grid container spacing={2} alignItems="center" justifyContent="center" textAlign="center">
         <Grid item xs={12}>
-          <StyledTypography variant="h5" align="center" fontWeight="bold" mb={4}>
+          <StyledTypography variant="h5" align="center" fontWeight="bold">
             Caring is the new marketing
           </StyledTypography>
           <StyledTypography variant="subtitle1" align="center" color="#717171" mb={4}>
@@ -70,7 +72,7 @@ const CommunityUpdates = () => {
           <Grid item xs={12} md={4}>
             <StyledBox>
               <img src={Card1} alt="Safeguarding Processes" style={{ width: '100%', height: 'auto' }} />
-              <Overlay>
+              <Overlay sx={{textAlign:"Center",borderRadius: '8px'}}>
                 <OverlayTitle>Creating Streamlined Safeguarding Processes with OneRen</OverlayTitle>
                 <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
               </Overlay>
@@ -86,7 +88,7 @@ const CommunityUpdates = () => {
           <Grid item xs={12} md={4}>
             <StyledBox>
               <img src={Card2} alt="Safeguarding Processes" style={{ width: '100%', height: 'auto' }} />
-              <Overlay>
+              <Overlay sx={{textAlign:"Center",borderRadius: '8px'}}>
                 <OverlayTitle>What are your safeguarding responsibilities and how can you manage them?</OverlayTitle>
                 <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
               </Overlay>
@@ -99,9 +101,9 @@ const CommunityUpdates = () => {
           <Grid item xs={12} md={4}>
             <StyledBox>
               <img src={Card3} alt="Membership Model" style={{ width: '100%', height: 'auto' }} />
-              <Overlay>
-                <OverlayTitle>Revamping the Membership Model with Triathlon <br/>Australia</OverlayTitle>
-                <OverlayButton sx={{ color: 'green' }}>Read more →</OverlayButton>
+              <Overlay sx={{textAlign:"Center",borderRadius: '8px'}}>
+                <OverlayTitle >Revamping the Membership Model with Triathlon <br/>Australia</OverlayTitle>
+                <OverlayButton sx={{ color: 'green'}}>Read more →</OverlayButton>
               </Overlay>
             </StyledBox>
           </Grid>

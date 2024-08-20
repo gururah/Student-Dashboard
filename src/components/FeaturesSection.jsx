@@ -1,134 +1,87 @@
-import React from 'react';
-import { Container, Typography, Box, Grid, Paper } from '@mui/material';
+
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
 
-const FeaturesSection = () => {
-  return (
-    <Container>
-      <Box py={5}>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        >
-          Manage your entire community 
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        >
-           in a single system
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          gutterBottom
-          align="center"
-          sx={{ color: '#708090' }} 
-        >
-          Who is Nextcent suitable for?
-        </Typography>
-        <br/>
-        <br/>
-        <br/>
-<Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <Paper elevation={3}>
-              <Box p={3} textAlign="center">
-                <img src={image1} alt="Membership Organisations" style={{ width: '100%', height: 'auto', maxWidth: '100px', marginBottom: '16px' }} />
-                <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        >Membership
-        
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        > Organisations
-        
-        </Typography>
-                
-                <Typography variant="body1">
-                  Our membership management software provides full automation of membership renewals and payments.
-                </Typography>
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Paper elevation={3}>
-              <Box p={3} textAlign="center">
-                <img src={image2} alt="National Associations" style={{ width: '100%', height: 'auto', maxWidth: '100px', marginBottom: '16px' }} />
-                <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        >National
-        
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        > Association
-        
-        </Typography>
-                <Typography variant="body1">
-                  Our membership management software provides full automation of membership renewals and payments.
-                </Typography>
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
 
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    // Reduced size of the boxes
+    maxWidth: 300,
+    margin: '0 auto', // Centering the boxes
+}));
 
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Paper elevation={3}>
-              <Box p={3} textAlign="center">
-                <img src={image3} alt="Clubs And Groups" style={{ width: '100%', height: 'auto', maxWidth: '100px', marginBottom: '16px' }} />
-                <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        >Clubs And
-        
-        </Typography>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          align="center" 
-          sx={{ color: '#000000' }}  
-        > Groups
-        
-        </Typography>
-                <Typography variant="body1">
-                  Our membership management software provides full automation of membership renewals and payments.
-                </Typography>
-              </Box>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
-  );
-};
+export default function FeaturesSection() {
+    return (
+        <Box sx={{ flexGrow: 1,
+         mx: { xs: 1, sm: 2, md: 4 }, my: { xs: 2, sm: 4, md: 8 }
+          }}>
+            <Grid container spacing={2} justifyContent="center">
+                <Grid xs={12} sm={4}  display="flex" justifyContent="center">
+                    <Item>
+                        <Box>
+                            <img src={image1} alt="" style={{ width: '80px', height: 'auto' }} />
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                MemberShip
+                            </h1>
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                Organisations
+                            </h1>
+                            <p style={{ margin: '0 0 10px', fontSize: '0.9rem' }}>
+                                Our membership management software
+                                provides full automation of membership
+                                renewals and payments
+                            </p>
+                        </Box>
+                    </Item>
+                </Grid>
+                <Grid xs={12} sm={4} display="flex" justifyContent="center" alignContent='center'>
+                    <Item>
+                        <Box>
+                            <img src={image2} alt="" style={{ width: '80px', height: 'auto' }} />
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                National
+                            </h1>
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                Associations
+                            </h1>
+                            <p style={{ margin: '0', fontSize: '0.9rem' }}>
+                                Our membership management software
+                                provides full automation of membership
+                                renewals and payments
+                            </p>
+                        </Box>
+                    </Item>
+                </Grid>
+                <Grid xs={12} sm={4} display="flex" justifyContent="center">
+                    <Item>
+                        <Box>
+                            <img src={image3} alt="" style={{ width: '80px', height: 'auto' }} />
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                Clubs
+                            </h1>
+                            <h1 style={{ margin: '0', fontSize: '1.2rem' }}>
+                                And Groups
+                            </h1>
+                            <p style={{ margin: '0 0 10px', fontSize: '0.9rem' }}>
+                                Our membership management software
+                                provides full automation of membership
+                                renewals and payments
+                            </p>
+                        </Box>
+                    </Item>
+                </Grid>
+            </Grid>
+        </Box>
+    );
+}
 
-export default FeaturesSection;

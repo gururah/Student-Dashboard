@@ -67,14 +67,17 @@ const Header = () => {
             </Grid>
 
             
-            <Grid item xs={8} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
+            <Grid item xs={6} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
               <img src={logo} alt="Nexcent Logo" style={{ height: '30px' }} />
             </Grid>
 
             
-            <Grid item xs={2} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+            <Grid item xs={1} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
               <CustomButton color="inherit">Login</CustomButton>
             </Grid>
+            {/* <Grid item xs={1} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+              <CustomButton color="inherit">Sign up</CustomButton>
+            </Grid> */}
 
       
             <Grid item xs={3} md={3} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-start',marginLeft:'50px' }}>

@@ -5,17 +5,17 @@ import testimonialImage from '../assets/testimonialImage1.png';
 const TestimonialsSection = () => {
   return (
     <Container>
-      <Box py={5}>
+      <Box py={0}>
         <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={5} md={4}>
             <img
               src={testimonialImage}
               alt="Testimonial"
-              style={{ width: '462px', height: '452.59px', borderRadius: '8px' }} 
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }} 
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box p={3}>
+          <Grid item xs={12} sm={7} md={8}>
+            <Box p={3} textAlign={{ xs: 'center', md: 'left', sm: 'left' }}>
               <Typography variant="h4" component="h2" gutterBottom>
                 The unseen of spending three years at Pixelgrade
               </Typography>
@@ -25,9 +25,10 @@ const TestimonialsSection = () => {
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ispsum. Sed accumsan quarn vitae est varius fringila. Pellenteque  placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis.Nullam pulvinar sit amer risus pretium auctor. Etiam quis massa pulvinar aliquam quam vitae, tempus sem. Donec elementum pulvier adio.
               </Typography>
+              
               <Button
                 variant="contained"
-                sx={{ backgroundColor: '#4caf50', color: 'white' }}
+                sx={{ backgroundColor: '#4caf50', color: 'white' }}       
               >
                 Learn More
               </Button>

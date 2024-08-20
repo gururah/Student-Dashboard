@@ -6,9 +6,9 @@ import logo3 from '../assets/logo3.png';
 import logo4 from '../assets/logo4.png';
 import logo5 from '../assets/logo5.png';
 import logo6 from '../assets/logo6.png';
-import logo7 from '../assets/logo7.png';
+// import logo7 from '../assets/logo7.png';
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 const ClientsSection = () => {
   return (
@@ -29,9 +29,9 @@ const ClientsSection = () => {
         <>
         <Grid container spacing={3} justifyContent="space-between" alignItems="center">
           {logos.map((logo, index) => (
-            <Grid item xs={12} sm={6} md={1} key={index}>
+            <Grid item xs={4} sm={2} md={1} alignItems="center" key={index}>
               <Box display="flex" justifyContent="center">
-                <img src={logo} alt={`Client Logo ${index + 1}`} style={{ maxWidth: '100%', maxHeight: '100px', objectFit: 'contain' }} />
+                <img src={logo} alt={`Client Logo ${index + 1}`} style={{ maxWidth: '100%', maxHeight: 'auto', objectFit: 'contain' }} />
               </Box>
             </Grid>
           ))}

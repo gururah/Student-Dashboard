@@ -25,7 +25,7 @@ const TenthPage = () => {
                         }} 
                         variant="contained"
                     >
-                        Get A Demo
+                        Get A Demo →
                     </Button>
                 </Grid>
             </Grid>

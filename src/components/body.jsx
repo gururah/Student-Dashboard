@@ -12,19 +12,19 @@ function Body7() {
     <Box
       sx={{
         flexGrow: 1,
-        bgcolor: '#f5f5f5',
+        bgcolor: '#F5F7FA',
         py: 4,
         px: { xs: 2, sm: 4, md: 6 },
-        mt: { xs: 4, sm: 6, md: 8 },
+         mt: { xs: 4, sm: 6, md: 8 },
       }}
     >
       <Grid container spacing={1}>
-        <Grid item xs={12} md={6}>
-          <Box sx={{ textAlign: { xs: 'center', md: 'left',marginLeft:'100px',padding:'fluid'} }}>
+        <Grid item xs={12} md={6} sm={6}>
+          <Box sx={{ textAlign: { xs: 'center', md: 'left',padding:'fluid'} }} marginLeft='110px'>
             <Typography variant="h4" component="h1" gutterBottom>
               Helping a local
             </Typography>
-            <Typography variant="h4" component="h1" sx={{ color: 'green' }}>
+            <Typography variant="h4" component="h1" sx={{ color: 'green',fontsize:'12px'}}>
               business reinvent itself
             </Typography>
             <Typography variant="body1" sx={{ color: 'black', mt: 1 }}>
@@ -32,39 +32,39 @@ function Body7() {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Grid container spacing={3} justifyContent="center">
-            <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={5} sm={3}>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item xs={6} sm={6}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={Icon1} alt="Icon 1" style={{ maxWidth: '100%', maxHeight: '60px', objectFit: 'contain' }} />
-                <Box sx={{ ml: 1, textAlign: 'center' }}>
+                <Box sx={{ ml: 1, textAlign: 'left' }}>
                   <Typography variant="h6" component="b">2,245,000</Typography>
                   <Typography variant="body2">Members</Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6} sm={6} md={3}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={Icon2} alt="Icon 2" style={{ maxWidth: '100%', maxHeight: '60px', objectFit: 'contain' }} />
-                <Box sx={{ ml: 1, textAlign: 'center' }}>
-                  <Typography variant="h6" component="b">46,328</Typography>
+                <Box sx={{ ml: 1, textAlign: 'left' }}>
+                  <Typography variant="h6" component="b">4,689,328</Typography>
                   <Typography variant="body2">Clubs</Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6} sm={6}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={Icon3} alt="Icon 3" style={{ maxWidth: '100%', maxHeight: '60px', objectFit: 'contain' }} />
-                <Box sx={{ ml: 1, textAlign: 'center' }}>
+                <Box sx={{ ml: 1, textAlign: 'left' }}>
                   <Typography variant="h6" component="b">8,28,000</Typography>
                   <Typography variant="body2">Event Bookings</Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6} sm={6} md={3}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={Icon4} alt="Icon 4" style={{ maxWidth: '100%', maxHeight: '60px', objectFit: 'contain' }} />
-                <Box sx={{ ml: 1, textAlign: 'center' }}>
+                <Box sx={{ ml: 1, textAlign: 'left' }}>
                   <Typography variant="h6" component="b">1,926,000</Typography>
                   <Typography variant="body2">Payments</Typography>
                 </Box>

@@ -4,11 +4,11 @@ import heroImage from '../../public/heroimage.png';
 
 const HeroSection = () => {
   return (
-    <Container>
-      <Box py={10}>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Box textAlign={{ xs: 'center', md: 'left' }}>
+      <Container sx={{width:'1440',height:'599'}}>
+        <Box py={10}>
+          <Grid container spacing={2} alignItems='left'  fontSize={{xs:'24px'}}>
+            <Grid item xs={12} md={8} sm={6}>
+            <Box textAlign={{ xs: 'center', md: 'left', sm: 'left' }}>
               <Typography
                 variant="h2"
                 component="h1"
@@ -19,7 +19,7 @@ const HeroSection = () => {
               </Typography>
               <Typography
                 variant="h3"
-                component="h3"
+                // component="h3"
                 gutterBottom
                 sx={{ color: 'green' }}
               >
@@ -46,8 +46,8 @@ const HeroSection = () => {
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box display="flex" justifyContent={{ xs: 'center', md: 'flex-end' }}>
+          <Grid item xs={12} md={4} sm={6}>
+            <Box display="flex" justifyContent={{ xs: 'center', md: 'flex-end',sm:'flex-end' }}>
               <img src={heroImage} alt="Hero" style={{ maxWidth: '100%', height: 'auto' }} />
             </Box>
           </Grid>
